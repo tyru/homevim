@@ -14,6 +14,6 @@ if exists('b:undo_ftplugin')
 else
   let b:undo_ftplugin = ''
 endif
-let b:undo_ftplugin .= 'unlet b:match_words'
+let b:undo_ftplugin .= 'unlet! b:match_words'
 
 let &cpo = s:save_cpo

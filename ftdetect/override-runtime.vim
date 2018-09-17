@@ -7,5 +7,3 @@ autocmd BufNewFile,BufRead *.markdown,*.mkd,*.md,*.mkdn
             \ setlocal filetype=markdown
 autocmd BufNewFile,BufRead */Dropbox/memo/*.txt
             \ setlocal filetype=markdown
-autocmd BufNewFile,BufRead *.pro
-            \ setlocal filetype=prolog

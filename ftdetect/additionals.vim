@@ -45,5 +45,5 @@ autocmd BufNewFile,BufRead ~/.earthquake/config
             \ setfiletype ruby
 autocmd BufNewFile,BufRead *.ftl
             \ setfiletype ftl
-autocmd BufNewFile,BufRead *.pro
-            \ setfiletype prolog
+autocmd BufNewFile,BufRead ~/.gitconfig.*
+            \ setfiletype gitconfig

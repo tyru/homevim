@@ -3,7 +3,7 @@ scriptencoding utf-8
 let s:save_cpo = &cpo
 set cpo&vim
 
-setlocal expandtab
+setlocal noexpandtab
 
 if exists('b:undo_ftplugin')
   let b:undo_ftplugin .= ' | '

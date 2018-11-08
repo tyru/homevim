@@ -19,13 +19,13 @@ function! s:cmd_unwatch_autocmd(event)
   let event = tolower(a:event)
   if !exists('##'.event)
     echohl ErrorMsg
-    echomsg "Invalid event name: ".a:event
+    echomsg 'Invalid event name: '.a:event
     echohl None
     return
   endif
   if !has_key(s:watching_events, event)
     echohl ErrorMsg
-    echomsg "Not watching ".a:event." event yet..."
+    echomsg 'Not watching '.a:event.' event yet...'
     echohl None
     return
   endif
@@ -39,12 +39,12 @@ function! s:cmd_watch_autocmd(event)
   let event = tolower(a:event)
   if !exists('##'.event)
     echohl ErrorMsg
-    echomsg "Invalid event name: ".a:event
+    echomsg 'Invalid event name: '.a:event
     echohl None
     return
   endif
   if has_key(s:watching_events, event)
-    echomsg "Already watching ".a:event." event."
+    echomsg 'Already watching '.a:event.' event.'
     return
   endif
 

@@ -1,5 +1,11 @@
 
 function! vimrc#cmd_watch_autocmd#call(event, bang) abort
+  if a:event ==# '*'
+    for event in getcompletion('*', 'event')
+      call vimrc#cmd_watch_autocmd#call(event, a:bang)
+    endfor
+    return
+  endif
   if a:bang
     call s:cmd_unwatch_autocmd(a:event)
   else

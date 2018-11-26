@@ -1,0 +1,43 @@
+delete autoload
+snippet autoload
+options head
+    scriptencoding utf-8
+    let s:save_cpo = &cpo
+    set cpo&vim
+
+    ${0}
+
+    let &cpo = s:save_cpo
+
+delete g:loaded
+snippet loaded
+options head
+    if exists('g:loaded_${1}')
+      finish
+    endif
+    let g:loaded_$1 = 1
+
+snippet plugin
+options head
+    scriptencoding utf-8
+    let s:save_cpo = &cpo
+    set cpo&vim
+    if exists('g:loaded_${1}')
+      finish
+    endif
+    let g:loaded_$1 = 1
+
+    ${0}
+
+    let &cpo = s:save_cpo
+
+delete try
+snippet try
+options head
+    try
+      ${0:TARGET}
+    endtry
+
+snippet pp
+options head
+    echomsg PP([${0:TARGET}])

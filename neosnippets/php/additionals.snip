@@ -1,0 +1,6 @@
+delete p
+snippet p
+  print_r(${0:TARGET});
+
+snippet e
+  error_log('\$${1:$var} = ' . var_export($1, true));
